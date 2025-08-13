@@ -1,0 +1,729 @@
+<html lang="en"><head>
+    <meta property="og:title" content="Northwest Greenville Roleplay™">
+    <meta property="og:description" content="The best experience for Roblox Greenville players.">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1308482949456330812/1375846262234157146/NGVRHTMLBANNER.gif?ex=68332c2e&amp;is=6831daae&amp;hm=04f74ffe08d58331fae66796e1577573b77080635ead74304fa27fe21e06aca6&amp;">
+    <meta property="og:url" content="http://strawberry.fps.ms:10754/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image:type" content="image/gif">
+    <meta property="og:type" content="website">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Northwest Greenville Roleplay</title><link rel="icon" type="image/png" sizes="32x32" href="/static/images/NGVRICON.png"><style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000000;
+            min-height: 100vh;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            object-fit: cover;
+        }
+
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, rgba(255, 0, 71, 0.4), rgba(0, 0, 0, 0.7), rgba(255, 0, 71, 0.3), rgba(26, 26, 26, 0.8));
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 2rem;
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #FF0047;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo h1 {
+            color: #FF0047;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 0, 72, 0.502);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 0, 71, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-links a:hover::before {
+            left: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #FF0047;
+            text-shadow: 0 0 10px rgba(255, 0, 71, 0.5);
+        }
+
+        .hero-section {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #FF0047, #ffffff, #FF0047);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textShimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes textShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #FF0047, #ff3366);
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.4s ease;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(255, 0, 71, 0.4);
+            color: white !important;
+        }
+
+        .btn-secondary {
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+            border: 2px solid #FF0047;
+            backdrop-filter: blur(10px);
+        }
+
+        .features-section {
+            padding: 5rem 2rem;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #FF0047;
+            text-shadow: 0 0 10px rgba(255, 0, 71, 0.5);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid #FF0047;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 0, 71, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+            animation: shimmer 1.5s ease-in-out;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 0, 71, 0.3);
+            border-color: #ff3366;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #FF0047;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-card h3 {
+            color: #FF0047;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-card p {
+            opacity: 0.8;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+        .stat-link {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block; /* or block, if needed */
+        }
+        .stats-section {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            padding: 1.5rem;
+            background: rgba(255, 0, 71, 0.1);
+            border-radius: 15px;
+            border: 1px solid #FF0047;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: scale(1.05);
+            background: rgba(255, 0, 71, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FF0047;
+            margin-bottom: 0.5rem;
+            animation: countUp 2s ease-out;
+        }
+        
+        .stat-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FF0047;
+            margin-bottom: 0.5rem;
+            animation: countUp 2s ease-out;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2rem;
+            text-align: center;
+            border-top: 2px solid #FF0047;
+            margin-top: 3rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #FF0047;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ff3366;
+            text-shadow: 0 0 10px rgba(255, 0, 71, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: #FF0047;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+    </style><style>
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes countUp {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        </style></head>
+
+    
+    
+    
+    
+    
+
+<body>
+    <video class="video-background" autoplay="" muted="" loop="" playsinline="" webkit-playsinline="">
+    <source src="videos/Northwest Greenville Roleplay Ad.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
+    
+    <div class="animated-bg"></div>
+
+    <div class="floating-particles">
+        <div class="particle" style="width: 4px; height: 4px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="width: 6px; height: 6px; top: 60%; left: 20%; animation-delay: 2s;"></div>
+        <div class="particle" style="width: 3px; height: 3px; top: 40%; left: 80%; animation-delay: 4s;"></div>
+        <div class="particle" style="width: 5px; height: 5px; top: 80%; left: 70%; animation-delay: 1s;"></div>
+        <div class="particle" style="width: 4px; height: 4px; top: 30%; left: 50%; animation-delay: 3s;"></div>
+        <div class="particle" style="width: 5px; height: 5px; top: 10%; left: 60%; animation-delay: 2.5s;"></div>
+        <div class="particle" style="width: 3px; height: 3px; top: 70%; left: 30%; animation-delay: 4.5s;"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <h1>NGVR</h1>
+                <span>Northwest Greenville Roleplay</span>
+            </div>
+            <div class="nav-links">
+                <!--<a href="#home">Home</a>-->
+                <!--<a href="#features">Features</a>-->
+                <a href="aboutus">About</a>
+                <!--<a href="#contact">Contact</a>-->
+                <a href="login" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="savevideotime()">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">NORTHWEST GREENVILLE</h1>
+            <h2 class="hero-subtitle">Greenville Roleplay Experience</h2>
+            <p class="hero-description">
+                Step into Northwest Greenville Roleplay™ — the ultimate Roblox Greenville experience. Dive into realistic roleplay, explore unique features, and connect with a dedicated community in a world where every moment counts.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://discord.gg/drH8durADq" class="btn">Join Our Community</a>
+                <a href="https://discord.gg/drH8durADq" class="btn btn-secondary">Discord Server</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose NGVR?</h2>
+            <div class="features-grid">
+                <div class="feature-card" style="animation-delay: 0s;">
+                    <div class="feature-icon"><img src="https://cdn.discordapp.com/emojis/1366819017746157588.webp?size=128&amp;animated=true" alt="heart" height="50"></div>
+                    <h3>Immersive Roleplay Scenarios</h3>
+                    <p>From casual cruises to high-stakes situations.</p>
+                </div>
+
+                <div class="feature-card" style="animation-delay: 0.1s;">
+                    <div class="feature-icon"><img src="https://cdn.discordapp.com/emojis/1375426897126756395.gif?size=40&amp;quality=lossless" alt="police" height="50"></div>
+                    <h3>Emergency Departments</h3>
+                    <p>Active Police, Fire, EMS &amp; more.</p>
+                </div>
+
+                <div class="feature-card" style="animation-delay: 0.2s;">
+                    <div class="feature-icon"><img src="https://cdn.discordapp.com/emojis/1375428376059449405.gif?size=40&amp;quality=lossless" alt="currency" height="50"></div>
+                    <h3>Banking &amp; Property System</h3>
+                    <p>Own houses, manage money &amp; live big.</p>
+                </div>
+
+                <div class="feature-card" style="animation-delay: 0.3s;">
+                    <div class="feature-icon"><img src="https://cdn.discordapp.com/emojis/1366121020368486470.webp?size=128&amp;animated=true" alt="heartrotate" height="50"></div>
+                    <h3>Daily Roleplay Sessions </h3>
+                    <p>A new adventure every day.</p>
+                </div>
+
+                <div class="feature-card" style="animation-delay: 0.4s;">
+                    <div class="feature-icon"><img src="https://cdn.discordapp.com/emojis/1366121002823585802.webp?size=128&amp;animated=true" alt="JumpingStar" height="50"></div>
+                    <h3>24/7 Support Team</h3>
+                    <p>Fast ticket assistance anytime.</p>
+                </div>
+
+                <div class="feature-card" style="animation-delay: 0.5s;">
+                    <div class="feature-icon"><img src="https://cdn.discordapp.com/emojis/1375431722664984627.gif?size=40&amp;quality=lossless" alt="Heartfilled" height="50"></div>
+                    <h3>Frequent Giveaways &amp; Special Events</h3>
+                    <p>Win big and have fun!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title">Community Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1095</div>
+                    <div class="stat-label">Current Member Count</div>
+                </div>
+                <a href="staffdirectory" class="stat-link">
+                    <div class="stat-item">
+                        <div class="stat-number">34</div>
+                        <div class="stat-label">Total Staff Team</div>
+                    </div>
+                </a>
+                <div class="stat-item">
+                    <div class="stat-number">218</div>
+                    <div class="stat-label">Total Vehicles Registered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">386</div>
+                    <div class="stat-label">Total Tickets Handeled</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="t&amp;c">Terms &amp; Conditions</a>
+            <a href="privacy-policy">Privacy Policy</a>
+            <!--<a href="#support">Support</a>-->
+            <a href="https://discord.gg/drH8durADq">Discord Server</a>
+            <!--<a href="#forums">Community Forums</a>-->
+        </div>
+        <p>© 2024 Northwest Greenville Roleplay. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const video = document.querySelector('video');
+        video.addEventListener('loadedmetadata', () => {
+            const time = localStorage.getItem('videoTime');
+            if (time) video.currentTime = time;
+        });
+        // Animation delays for feature cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+
+            // Add click effects to buttons
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    if (!this.href || this.href.includes('#')) {
+                        e.preventDefault();
+                    }
+                    
+                    // Add ripple effect
+                    const ripple = document.createElement('span');
+                    ripple.style.position = 'absolute';
+                    ripple.style.borderRadius = '50%';
+                    ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+                    ripple.style.transform = 'scale(0)';
+                    ripple.style.animation = 'ripple 0.6s linear';
+                    ripple.style.left = (e.clientX - this.offsetLeft - 10) + 'px';
+                    ripple.style.top = (e.clientY - this.offsetTop - 10) + 'px';
+                    ripple.style.width = '20px';
+                    ripple.style.height = '20px';
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.feature-card, .stat-item').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Dynamic stats animation
+            const animateStats = () => {
+                const statNumbers = document.querySelectorAll('.stat-number');
+                statNumbers.forEach(stat => {
+                    const text = stat.textContent.replace(/,/g, '');
+                    const num = parseInt(text);
+
+                    if (!isNaN(num)) {
+                        let current = 0;
+                        const increment = num / 100;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= num) {
+                                current = num;
+                                clearInterval(timer);
+                            }
+                            stat.textContent = Math.floor(current).toLocaleString();
+                        }, 20);
+                    }
+                });
+            };
+
+            // Trigger stats animation when section is visible
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const statsSection = document.querySelector('.stats-section');
+            if (statsSection) {
+                statsObserver.observe(statsSection);
+            }
+        });
+        function savevideotime() {
+            localStorage.setItem('videoTime', document.querySelector('video').currentTime);
+            window.location.href = 'login';
+        }
+        // Add CSS for ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes countUp {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+</body></html>
