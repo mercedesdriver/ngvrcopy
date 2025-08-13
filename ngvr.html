@@ -1,12 +1,12 @@
 <html lang="en"><head>
-    <meta property="og:title" content="Northwest Greenville Roleplay™">
-    <meta property="og:description" content="The best experience for Roblox Greenville players.">
+    <meta property="og:title" content="Northwest Greenville Roleplay™ - Staff Directory">
+    <meta property="og:description" content="Meet our dedicated staff team.">
     <meta property="og:image" content="https://cdn.discordapp.com/attachments/1308482949456330812/1375846262234157146/NGVRHTMLBANNER.gif?ex=68332c2e&amp;is=6831daae&amp;hm=04f74ffe08d58331fae66796e1577573b77080635ead74304fa27fe21e06aca6&amp;">
     <meta property="og:url" content="http://strawberry.fps.ms:10754/">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:image:type" content="image/gif">
     <meta property="og:type" content="website">
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Northwest Greenville Roleplay</title><link rel="icon" type="image/png" sizes="32x32" href="/static/images/NGVRICON.png"><style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Staff Directory - NGVR Dashboard</title><link rel="icon" type="image/png" sizes="32x32" href="images/NGVRICON.png"><style>
         * {
             margin: 0;
             padding: 0;
@@ -15,20 +15,10 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #000000;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #FF0047 100%);
             min-height: 100vh;
             color: #ffffff;
             overflow-x: hidden;
-        }
-
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            object-fit: cover;
         }
 
         .animated-bg {
@@ -38,7 +28,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: linear-gradient(45deg, rgba(255, 0, 71, 0.4), rgba(0, 0, 0, 0.7), rgba(255, 0, 71, 0.3), rgba(26, 26, 26, 0.8));
+            background: linear-gradient(45deg, #FF0047, #000000, #FF0047, #1a1a1a);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
         }
@@ -83,179 +73,98 @@
             color: #FF0047;
             font-size: 1.8rem;
             font-weight: bold;
-            text-shadow: 0 0 10px rgba(255, 0, 72, 0.502);
+            text-shadow: 0 0 10px rgba(255, 0, 71, 0.5);
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
             align-items: center;
         }
 
-        .nav-links a {
+        .nav-link {
             color: #ffffff;
             text-decoration: none;
-            transition: all 0.3s ease;
             padding: 0.5rem 1rem;
             border-radius: 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .nav-links a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 0, 71, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .nav-links a:hover::before {
-            left: 100%;
-        }
-
-        .nav-links a:hover {
-            color: #FF0047;
-            text-shadow: 0 0 10px rgba(255, 0, 71, 0.5);
-        }
-
-        .hero-section {
-            min-height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero-title {
-            font-size: 4rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #FF0047, #ffffff, #FF0047);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: textShimmer 3s ease-in-out infinite;
-        }
-
-        @keyframes textShimmer {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        .hero-description {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 3rem;
-            opacity: 0.8;
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease-out 0.9s both;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 30px;
-            background: linear-gradient(45deg, #FF0047, #ff3366);
-            color: white;
-            font-weight: bold;
-            font-size: 1.1rem;
-            cursor: pointer;
             transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
+            border: 1px solid transparent;
         }
 
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 0.4s ease;
-        }
-
-        .btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 30px rgba(255, 0, 71, 0.4);
-            color: white !important;
-        }
-
-        .btn-secondary {
-            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
-            border: 2px solid #FF0047;
-            backdrop-filter: blur(10px);
-        }
-
-        .features-section {
-            padding: 5rem 2rem;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
+        .nav-link:hover {
+            background: rgba(255, 0, 71, 0.2);
+            border-color: #FF0047;
+            transform: scale(1.05);
         }
 
         .container {
             max-width: 1400px;
-            margin: 0 auto;
+            margin: 2rem auto;
+            padding: 0 2rem;
         }
 
-        .section-title {
+        .page-header {
             text-align: center;
-            font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #FF0047;
-            text-shadow: 0 0 10px rgba(255, 0, 71, 0.5);
+            animation: fadeInUp 0.8s ease-out;
         }
 
-        .features-grid {
+        .page-header h1 {
+            color: #FF0047;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(255, 0, 71, 0.5);
+        }
+
+        .page-header p {
+            color: #cccccc;
+            font-size: 1.1rem;
+        }
+
+        .staff-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid #FF0047;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 0, 71, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FF0047;
+            display: block;
+        }
+
+        .stat-label {
+            color: #cccccc;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
         }
 
-        .feature-card {
+        .staff-card {
             background: rgba(0, 0, 0, 0.7);
             border-radius: 15px;
             padding: 2rem;
@@ -267,7 +176,7 @@
             overflow: hidden;
         }
 
-        .feature-card::before {
+        .staff-card::before {
             content: '';
             position: absolute;
             top: -50%;
@@ -280,7 +189,7 @@
             opacity: 0;
         }
 
-        .feature-card:hover::before {
+        .staff-card:hover::before {
             opacity: 1;
             animation: shimmer 1.5s ease-in-out;
         }
@@ -290,143 +199,175 @@
             100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
         }
 
-        .feature-card:hover {
+        .staff-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(255, 0, 71, 0.3);
             border-color: #ff3366;
         }
 
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #FF0047;
+        .staff-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
         }
 
-        .feature-card h3 {
-            color: #FF0047;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .feature-card p {
-            opacity: 0.8;
-            line-height: 1.6;
-            position: relative;
-            z-index: 1;
-        }
-        .stat-link {
-            text-decoration: none;
-            color: inherit;
-            display: inline-block; /* or block, if needed */
-        }
-        .stats-section {
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .stat-item {
-            padding: 1.5rem;
-            background: rgba(255, 0, 71, 0.1);
-            border-radius: 15px;
-            border: 1px solid #FF0047;
-            backdrop-filter: blur(10px);
+        .staff-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #FF0047;
+            box-shadow: 0 0 20px rgba(255, 0, 71, 0.3);
             transition: all 0.3s ease;
         }
 
-        .stat-item:hover {
-            transform: scale(1.05);
+        .staff-avatar:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 0, 71, 0.5);
+        }
+
+        .staff-basic-info {
+            flex: 1;
+        }
+
+        .staff-name {
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .staff-role {
+            color: #FF0047;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+
+        .rank-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .rank-high {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000000;
+            border: 1px solid #FFD700;
+        }
+
+        .rank-middle {
+            background: linear-gradient(45deg, #C0C0C0, #A0A0A0);
+            color: #000000;
+            border: 1px solid #C0C0C0;
+        }
+
+        .rank-low {
+            background: linear-gradient(45deg, #CD7F32, #A0522D);
+            color: #ffffff;
+            border: 1px solid #CD7F32;
+        }
+
+        .staff-details {
+            display: grid;
+            gap: 0.8rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            background: rgba(255, 0, 71, 0.1);
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .detail-row:hover {
             background: rgba(255, 0, 71, 0.2);
         }
 
-        .stat-number {
-            font-size: 2.5rem;
+        .detail-label {
+            color: #cccccc;
+            font-size: 0.9rem;
+        }
+
+        .detail-value {
+            color: #ffffff;
             font-weight: bold;
-            color: #FF0047;
-            margin-bottom: 0.5rem;
-            animation: countUp 2s ease-out;
-        }
-        
-        .stat-text {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #FF0047;
-            margin-bottom: 0.5rem;
-            animation: countUp 2s ease-out;
         }
 
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.8;
+        .discord-id {
+            font-family: 'Courier New', monospace;
+            background: rgba(114, 137, 218, 0.2);
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #7289da;
+            color: #7289da;
         }
 
-        .footer {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 2rem;
-            text-align: center;
-            border-top: 2px solid #FF0047;
-            margin-top: 3rem;
-        }
-
-        .footer-links {
+        .strikes-indicator {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
+            gap: 0.3rem;
+            align-items: center;
         }
 
-        .footer-links a {
-            color: #FF0047;
-            text-decoration: none;
-            transition: color 0.3s ease;
+        .strike-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ff4444;
+            box-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
         }
 
-        .footer-links a:hover {
-            color: #ff3366;
-            text-shadow: 0 0 10px rgba(255, 0, 71, 0.5);
+        .strike-dot.empty {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: none;
         }
 
-        @media (max-width: 768px) {
-            .nav-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .nav-links {
-                gap: 1rem;
-            }
-            
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
+        .no-strikes {
+            color: #4CAF50;
+            font-weight: bold;
         }
 
+        .performance-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .performance-excellent {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+        }
+
+        .performance-good {
+            background: linear-gradient(45deg, #2196F3, #1976D2);
+            color: white;
+        }
+
+        .performance-average {
+            background: linear-gradient(45deg, #FF9800, #F57C00);
+            color: white;
+        }
+        .performance-poor {
+            background: linear-gradient(45deg, #ff0000, #f50800);
+            color: white;
+        }
+        .performance-unknown {
+            background: linear-gradient(45deg, #888888, #444444);
+            color: #ffffff;
+        }
         .floating-particles {
             position: fixed;
             top: 0;
@@ -434,7 +375,7 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: 1;
+            z-index: -1;
         }
 
         .particle {
@@ -449,19 +390,56 @@
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(180deg); }
         }
-    </style><style>
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid #FF0047;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: rgba(255, 0, 71, 0.2);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
             }
             
-            @keyframes countUp {
-                from { opacity: 0; transform: translateY(20px); }
-                to { opacity: 1; transform: translateY(0); }
+            .staff-grid {
+                grid-template-columns: 1fr;
             }
-        </style></head>
+            
+            .staff-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .staff-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style></head>
 
     
     
@@ -470,260 +448,1590 @@
     
 
 <body>
-    <video class="video-background" autoplay="" muted="" loop="" playsinline="" webkit-playsinline="">
-    <source src="videos/Northwest Greenville Roleplay Ad.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
-
-    
     <div class="animated-bg"></div>
-
+    
     <div class="floating-particles">
         <div class="particle" style="width: 4px; height: 4px; top: 20%; left: 10%; animation-delay: 0s;"></div>
         <div class="particle" style="width: 6px; height: 6px; top: 60%; left: 20%; animation-delay: 2s;"></div>
         <div class="particle" style="width: 3px; height: 3px; top: 40%; left: 80%; animation-delay: 4s;"></div>
         <div class="particle" style="width: 5px; height: 5px; top: 80%; left: 70%; animation-delay: 1s;"></div>
         <div class="particle" style="width: 4px; height: 4px; top: 30%; left: 50%; animation-delay: 3s;"></div>
-        <div class="particle" style="width: 5px; height: 5px; top: 10%; left: 60%; animation-delay: 2.5s;"></div>
-        <div class="particle" style="width: 3px; height: 3px; top: 70%; left: 30%; animation-delay: 4.5s;"></div>
-    </div>
+    <div class="particle" style="width: 4.16337px; height: 4.16337px; top: 42.5661%; left: 25.4337%; animation-delay: 5.55017s; animation-duration: 4.72306s;"></div><div class="particle" style="width: 6.87921px; height: 6.87921px; top: 23.6888%; left: 78.4181%; animation-delay: 4.47928s; animation-duration: 6.51s;"></div><div class="particle" style="width: 2.52373px; height: 2.52373px; top: 2.17664%; left: 45.1872%; animation-delay: 3.53054s; animation-duration: 6.70699s;"></div><div class="particle" style="width: 3.44983px; height: 3.44983px; top: 25.4032%; left: 19.7201%; animation-delay: 3.06625s; animation-duration: 7.14431s;"></div><div class="particle" style="width: 7.17109px; height: 7.17109px; top: 76.5226%; left: 10.3857%; animation-delay: 1.41249s; animation-duration: 4.75986s;"></div><div class="particle" style="width: 4.2761px; height: 4.2761px; top: 0.193886%; left: 78.8413%; animation-delay: 1.51992s; animation-duration: 5.50122s;"></div><div class="particle" style="width: 5.7451px; height: 5.7451px; top: 24.5776%; left: 44.1302%; animation-delay: 4.58319s; animation-duration: 5.96374s;"></div><div class="particle" style="width: 5.33814px; height: 5.33814px; top: 56.5281%; left: 82.8229%; animation-delay: 0.0486991s; animation-duration: 6.6426s;"></div><div class="particle" style="width: 4.08127px; height: 4.08127px; top: 56.8543%; left: 52.5875%; animation-delay: 0.00918896s; animation-duration: 5.56576s;"></div><div class="particle" style="width: 5.7907px; height: 5.7907px; top: 6.70193%; left: 42.1867%; animation-delay: 0.122546s; animation-duration: 5.59329s;"></div></div>
 
     <nav class="navbar">
         <div class="nav-content">
             <div class="logo">
                 <h1>NGVR</h1>
-                <span>Northwest Greenville Roleplay</span>
+                <span>Staff Directory</span>
             </div>
             <div class="nav-links">
-                <!--<a href="#home">Home</a>-->
-                <!--<a href="#features">Features</a>-->
-                <a href="aboutus">About</a>
-                <!--<a href="#contact">Contact</a>-->
-                <a href="login" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="savevideotime()">Login</a>
+                <a href="home" class="nav-link">Home</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">NORTHWEST GREENVILLE</h1>
-            <h2 class="hero-subtitle">Greenville Roleplay Experience</h2>
-            <p class="hero-description">
-                Step into Northwest Greenville Roleplay™ — the ultimate Roblox Greenville experience. Dive into realistic roleplay, explore unique features, and connect with a dedicated community in a world where every moment counts.
-            </p>
-            <div class="cta-buttons">
-                <a href="https://discord.gg/drH8durADq" class="btn">Join Our Community</a>
-                <a href="https://discord.gg/drH8durADq" class="btn btn-secondary">Discord Server</a>
+    <div class="container">
+        <div class="page-header">
+            <h1><img src="https://cdn.discordapp.com/emojis/1366126415149531268.webp?size=96" alt="Staff" height="35"> Staff Directory</h1>
+            <p>Meet our dedicated team members who keep NGVR running smoothly</p>
+        </div>
+
+        <div class="staff-stats">
+            <div class="stat-card">
+                <span class="stat-number" id="totalStaff">45</span>
+                <div class="stat-label">Total Staff</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="highRankStaff">20</span>
+                <div class="stat-label">High Rank</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="middleRankStaff">7</span>
+                <div class="stat-label">Middle Rank</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="lowRankStaff">18</span>
+                <div class="stat-label">Low Rank</div>
             </div>
         </div>
-    </section>
 
-    <section class="features-section">
-        <div class="container">
-            <h2 class="section-title">Why Choose NGVR?</h2>
-            <div class="features-grid">
-                <div class="feature-card" style="animation-delay: 0s;">
-                    <div class="feature-icon"><img src="https://cdn.discordapp.com/emojis/1366819017746157588.webp?size=128&amp;animated=true" alt="heart" height="50"></div>
-                    <h3>Immersive Roleplay Scenarios</h3>
-                    <p>From casual cruises to high-stakes situations.</p>
-                </div>
-
-                <div class="feature-card" style="animation-delay: 0.1s;">
-                    <div class="feature-icon"><img src="https://cdn.discordapp.com/emojis/1375426897126756395.gif?size=40&amp;quality=lossless" alt="police" height="50"></div>
-                    <h3>Emergency Departments</h3>
-                    <p>Active Police, Fire, EMS &amp; more.</p>
-                </div>
-
-                <div class="feature-card" style="animation-delay: 0.2s;">
-                    <div class="feature-icon"><img src="https://cdn.discordapp.com/emojis/1375428376059449405.gif?size=40&amp;quality=lossless" alt="currency" height="50"></div>
-                    <h3>Banking &amp; Property System</h3>
-                    <p>Own houses, manage money &amp; live big.</p>
-                </div>
-
-                <div class="feature-card" style="animation-delay: 0.3s;">
-                    <div class="feature-icon"><img src="https://cdn.discordapp.com/emojis/1366121020368486470.webp?size=128&amp;animated=true" alt="heartrotate" height="50"></div>
-                    <h3>Daily Roleplay Sessions </h3>
-                    <p>A new adventure every day.</p>
-                </div>
-
-                <div class="feature-card" style="animation-delay: 0.4s;">
-                    <div class="feature-icon"><img src="https://cdn.discordapp.com/emojis/1366121002823585802.webp?size=128&amp;animated=true" alt="JumpingStar" height="50"></div>
-                    <h3>24/7 Support Team</h3>
-                    <p>Fast ticket assistance anytime.</p>
-                </div>
-
-                <div class="feature-card" style="animation-delay: 0.5s;">
-                    <div class="feature-icon"><img src="https://cdn.discordapp.com/emojis/1375431722664984627.gif?size=40&amp;quality=lossless" alt="Heartfilled" height="50"></div>
-                    <h3>Frequent Giveaways &amp; Special Events</h3>
-                    <p>Win big and have fun!</p>
-                </div>
-            </div>
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterStaff('all')">All Staff</button>
+            <button class="filter-btn" onclick="filterStaff('high')">High Rank</button>
+            <button class="filter-btn" onclick="filterStaff('middle')">Middle Rank</button>
+            <button class="filter-btn" onclick="filterStaff('low')">Low Rank</button>
+            <button class="filter-btn" onclick="filterStaff('no-strikes')">No Strikes</button>
         </div>
-    </section>
 
-    <section class="stats-section">
-        <div class="container">
-            <h2 class="section-title">Community Stats</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">1095</div>
-                    <div class="stat-label">Current Member Count</div>
-                </div>
-                <a href="staffdirectory" class="stat-link">
-                    <div class="stat-item">
-                        <div class="stat-number">34</div>
-                        <div class="stat-label">Total Staff Team</div>
+        <div class="staff-grid" id="staffGrid">
+            <div class="staff-card" data-rank="low" data-strikes="0" style="transform: translateY(0px) scale(1);">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/821846163916718140/869d91d97a2f3c31c3aa725b75dc327e.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Jay (@iPhone_11Flex)</div>
+                            <div class="staff-role">Senior Moderator</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
                     </div>
-                </a>
-                <div class="stat-item">
-                    <div class="stat-number">218</div>
-                    <div class="stat-label">Total Vehicles Registered</div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">821846163916718140</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">386</div>
-                    <div class="stat-label">Total Tickets Handeled</div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0" style="transform: translateY(0px) scale(1);">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1272957995768217634/cd57532470dd00676fb2113aa3a3ed88.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">VolvoV40 (@ILIKECARS23978)</div>
+                            <div class="staff-role">Staff in training</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1272957995768217634</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1232563580864561155/1b81adf1d0bba8cd6c22736afa46be78.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Batman (@lggtzx)</div>
+                            <div class="staff-role">Operations Manager</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1232563580864561155</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">2</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0" style="transform: translateY(0px) scale(1);">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1163537639614455909/39b348ae5c92c9cdb8d5bc6989393384.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">cvvxz (@caught4_in4k)</div>
+                            <div class="staff-role">Moderator</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1163537639614455909</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-poor">Poor</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/927149033359822919/7b25baa4d7afd3793faddd070d00af2a.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Ryze (@Ryze_3522)</div>
+                            <div class="staff-role">Staff Manager</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">927149033359822919</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">1 <span class="performance-badge performance-average">Average</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">9</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="1">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1141768955862728704/b83cdac2682bc062b2c5a3cd8184eb98.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Kyro (@zeiad45df)</div>
+                            <div class="staff-role">Senior Supervisor</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1141768955862728704</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">2</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Strikes:</span>
+                            <div class="detail-value">
+                                <div class="strikes-indicator">
+                                    <div class="strike-dot"></div>
+                                    <div class="strike-dot empty"></div>
+                                    <div class="strike-dot empty"></div>
+                                    <span style="margin-left: 0.5rem;">1 Strikes</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1076251510096269352/22ccd4f1c3fa903025a7623211516910.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Moul_Rmok (@adamsadi)</div>
+                            <div class="staff-role">Junior Moderator</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1076251510096269352</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">4 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/guilds/1253785666047709246/users/819985624378376232/avatars/36d4b14b825d9377cdbd5e0c9bf59051.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">22_explorer (@sdfhujisujhidf)</div>
+                            <div class="staff-role">Staff in training</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">819985624378376232</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/876466326040870942/a57d859d17fc449c40f5c394f9522628.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Diego</div>
+                            <div class="staff-role">Supervisor</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">876466326040870942</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">3 <span class="performance-badge performance-good">Good</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">10</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="2">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1241430809425215589/c68cb72815fc01ffb4c0023d751276f7.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Habibi512 (@Habibi_5122)</div>
+                            <div class="staff-role">Operations Manager</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1241430809425215589</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Strikes:</span>
+                            <div class="detail-value">
+                                <div class="strikes-indicator">
+                                    <div class="strike-dot"></div>
+                                    <div class="strike-dot "></div>
+                                    <div class="strike-dot empty"></div>
+                                    <span style="margin-left: 0.5rem;">2 Strikes</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/851843234929967115/8890f1d8df4c3413b6b9e9ba6cc410f5.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Cyn (@JohanesDeKoper_Goper)</div>
+                            <div class="staff-role">Associate Director</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">851843234929967115</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-average">Average</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">2</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/922247932445605928/0cce847ff2f814a6b5b1811e628e1c73.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Mo7amad (@Goldust24k_089)</div>
+                            <div class="staff-role">Staff in training</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">922247932445605928</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="middle" data-strikes="1">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/992135339940511764/7d731cc52f7e1286190ce05ead380ce0.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">dandrys (@Dannnyyy_26)</div>
+                            <div class="staff-role">Administrator</div>
+                            <span class="rank-badge rank-middle">Middle Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">992135339940511764</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Strikes:</span>
+                            <div class="detail-value">
+                                <div class="strikes-indicator">
+                                    <div class="strike-dot"></div>
+                                    <div class="strike-dot empty"></div>
+                                    <div class="strike-dot empty"></div>
+                                    <span style="margin-left: 0.5rem;">1 Strikes</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1286792141405814819/3d58a92b5282215d96a50a2ad12e5d21.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">dragsterjackk</div>
+                            <div class="staff-role">Operations Manager</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1286792141405814819</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="middle" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/745148448084328488/9ee3fc3cfc0b32c128ace48b10e1bcc0.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">FlowersForYou (@0hhMikey)</div>
+                            <div class="staff-role">Senior Administrator</div>
+                            <span class="rank-badge rank-middle">Middle Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">745148448084328488</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-excellent">Excellent</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">12</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1227746966411411669/feafb54ced2f18f1ad79faa767eaecbd.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Ocala (@chadedgar)</div>
+                            <div class="staff-role">Staff in training</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1227746966411411669</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="2">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1338645822425923666/70e5d2f25b7b9d35ec6811d2b6ca4a17.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Tio (@BigBadWolves678)</div>
+                            <div class="staff-role">Moderator</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1338645822425923666</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">1 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Strikes:</span>
+                            <div class="detail-value">
+                                <div class="strikes-indicator">
+                                    <div class="strike-dot"></div>
+                                    <div class="strike-dot "></div>
+                                    <div class="strike-dot empty"></div>
+                                    <span style="margin-left: 0.5rem;">2 Strikes</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1298610894585987146/27b7383729d9b676895dbe5444da67b0.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">LittleYikes (@AxolotolTAMED)</div>
+                            <div class="staff-role">Staff in training</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1298610894585987146</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="middle" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/861271348826079232/012b790a930deeef570ef5c2d8034d17.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Tristan (@Medial425)</div>
+                            <div class="staff-role">Administrator</div>
+                            <span class="rank-badge rank-middle">Middle Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">861271348826079232</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="2">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1353366719535775816/df30f32bd19b7a7938e075adc82399a4.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Follow_Jesus (@RyanJust_Ryan)</div>
+                            <div class="staff-role">Senior Moderator</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1353366719535775816</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Strikes:</span>
+                            <div class="detail-value">
+                                <div class="strikes-indicator">
+                                    <div class="strike-dot"></div>
+                                    <div class="strike-dot "></div>
+                                    <div class="strike-dot empty"></div>
+                                    <span style="margin-left: 0.5rem;">2 Strikes</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1139583097474658334/49145bab0a60804cfa7cc466fe451584.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Hiphopharperules</div>
+                            <div class="staff-role">Staff in training</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1139583097474658334</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="middle" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1194035834194772071/75bb6ba017b30fcb1c9dc04a54ce0efc.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">redsetter1</div>
+                            <div class="staff-role">Junior Administrator</div>
+                            <span class="rank-badge rank-middle">Middle Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1194035834194772071</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="middle" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/986582099286978611/bc7382f4dd0c07af2f62d9b30dd31e5c.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">JKuma (@JKuma12)</div>
+                            <div class="staff-role">Senior Administrator</div>
+                            <span class="rank-badge rank-middle">Middle Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">986582099286978611</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="1">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1364494422515122288/64f70c7ad23fcdaf80fe17692e9643e5.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Grandpa_Gv (@Guhhdjjbu)</div>
+                            <div class="staff-role">Junior Moderator</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1364494422515122288</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">5 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">4</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Strikes:</span>
+                            <div class="detail-value">
+                                <div class="strikes-indicator">
+                                    <div class="strike-dot"></div>
+                                    <div class="strike-dot empty"></div>
+                                    <div class="strike-dot empty"></div>
+                                    <span style="margin-left: 0.5rem;">1 Strikes</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/821420750647853087/748e7ccf39231e07a91fe3de47e663f1.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">bamboo (@Gamerstrikes99)</div>
+                            <div class="staff-role">Senior Moderator</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">821420750647853087</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/773907598915141652/2baf40412f8ec24d98e64b5010b0b540.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">III (@Ma7adi805)</div>
+                            <div class="staff-role">Director</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">773907598915141652</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-excellent">Excellent</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">68</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1176590544986718339/204dd24c3fd6eaccbdda0e241336d406.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">RealMaddoxplayzgames</div>
+                            <div class="staff-role">Management</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1176590544986718339</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">6 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">12</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1335520022478454784/c5d48950fa77c81092f892ab7d7103bb.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">HELLO (@ROBBEROX8)</div>
+                            <div class="staff-role">Staff in training</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1335520022478454784</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1255361509731729412/9b23e7fab394e23923be441d10a882ef.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Mase (@Mase_man3091)</div>
+                            <div class="staff-role">Senior Supervisor</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1255361509731729412</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1268147185460052034/e5469f833467d67a776b8b0343c4dd19.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Mercedes (@David72080)</div>
+                            <div class="staff-role">Vice Deputy Director</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1268147185460052034</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">1 <span class="performance-badge performance-excellent">Excellent</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">7</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/725793208277139602/9b8615237461b006b97e5ad7d536b061.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">n0juz (@7_juz)</div>
+                            <div class="staff-role">Operations Manager</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">725793208277139602</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1399421901754994820/37d86995280d2e739bd74d12cc97eff6.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Orin7x</div>
+                            <div class="staff-role">Operations Manager</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1399421901754994820</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="1">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1049516005887586374/1c420b647d12c8e8b433fca102da355e.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Unknown (@nabil_gv)</div>
+                            <div class="staff-role">Management</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1049516005887586374</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-poor">Poor</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Strikes:</span>
+                            <div class="detail-value">
+                                <div class="strikes-indicator">
+                                    <div class="strike-dot"></div>
+                                    <div class="strike-dot empty"></div>
+                                    <div class="strike-dot empty"></div>
+                                    <span style="margin-left: 0.5rem;">1 Strikes</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1048945365698748496/d7bffd1205d6f741897a34554edebeba.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Bugra</div>
+                            <div class="staff-role">Associate Director</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1048945365698748496</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-good">Good</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">1</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1154477283910897776/e8214d784a5cccecf0d1de6feba3f39c.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">TTrupee (@rogercover2)</div>
+                            <div class="staff-role">Deputy Director</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1154477283910897776</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-excellent">Excellent</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">11</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="middle" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1112436761310806097/5eee3e687c716480f9b97390befc4989.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Elizabeth (@ElizabethFloweryyy)</div>
+                            <div class="staff-role">Senior Administrator</div>
+                            <span class="rank-badge rank-middle">Middle Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1112436761310806097</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="middle" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1129361835406135347/ef53eff7ed97464d2494576165f1c8d7.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Pro832Ttlodhi99</div>
+                            <div class="staff-role">Administrator</div>
+                            <span class="rank-badge rank-middle">Middle Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1129361835406135347</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-excellent">Excellent</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">2</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/712809976397299902/23ccdebb9043a7eb775e1ca4186fca36.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">RS7 (@RaptorOY7)</div>
+                            <div class="staff-role">Junior Moderator</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">712809976397299902</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1294544246946136114/b620289441b04e76368bbd78c16140e8.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">j3nt (@j3nt_3)</div>
+                            <div class="staff-role">Server Overseer</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1294544246946136114</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/961619861333757972/116f854969b2d6dbde7b62db979b28e0.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">DonPierre (@SXCOOL_ww)</div>
+                            <div class="staff-role">Staff in training</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">961619861333757972</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1069716320649744506/88380caa317bc32045d486acffb90886.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Xakshoo</div>
+                            <div class="staff-role">Staff in training</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1069716320649744506</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="low" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1204857126699274240/53f06bdf926f971987b570df24016022.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">Tiaaaa (@tiaeeee)</div>
+                            <div class="staff-role">Staff in training</div>
+                            <span class="rank-badge rank-low">Low Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1204857126699274240</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="2">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1233584276176633858/9d3c5896305846910b4f4163d052c52f.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">ThatOneKid (@foxcaptain917)</div>
+                            <div class="staff-role">Staff Manager</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1233584276176633858</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Strikes:</span>
+                            <div class="detail-value">
+                                <div class="strikes-indicator">
+                                    <div class="strike-dot"></div>
+                                    <div class="strike-dot "></div>
+                                    <div class="strike-dot empty"></div>
+                                    <span style="margin-left: 0.5rem;">2 Strikes</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1308766349954125904/836f4dd1d7ad57e226625d24f950607c.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">MAXX_VERSTAPPEN</div>
+                            <div class="staff-role">Junior Supervisor</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1308766349954125904</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">2</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
+<div class="staff-card" data-rank="high" data-strikes="0">
+                    <div class="staff-header">
+                        <img src="https://cdn.discordapp.com/avatars/1262732327470108715/6ae18782c28b57fed4b4ef0a388171a8.png?size=1024" alt="Avatar" class="staff-avatar" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+                        <div class="staff-basic-info">
+                            <div class="staff-name">LOA I You7adi901</div>
+                            <div class="staff-role">Director</div>
+                            <span class="rank-badge rank-high">High Rank</span>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Discord ID:</span>
+                            <span class="detail-value discord-id" title="Click to copy Discord ID" style="cursor: pointer;">1262732327470108715</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Sessions Made:</span>
+                            <span class="detail-value">0 <span class="performance-badge performance-unknown">Not Rated</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Partners Made:</span>
+                            <span class="detail-value">0</span>
+                        </div>
+                        <div class="detail-row">
+                        <span class="detail-label">Strikes:</span>
+                        <span class="detail-value no-strikes">None</span>
+                    </div>
+                        
+                    </div>
+                </div>
+            
 
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="t&amp;c">Terms &amp; Conditions</a>
-            <a href="privacy-policy">Privacy Policy</a>
-            <!--<a href="#support">Support</a>-->
-            <a href="https://discord.gg/drH8durADq">Discord Server</a>
-            <!--<a href="#forums">Community Forums</a>-->
         </div>
-        <p>© 2024 Northwest Greenville Roleplay. All rights reserved.</p>
-    </footer>
+    </div>
 
     <script>
-        const video = document.querySelector('video');
-        video.addEventListener('loadedmetadata', () => {
-            const time = localStorage.getItem('videoTime');
-            if (time) video.currentTime = time;
-        });
-        // Animation delays for feature cards
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.feature-card');
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.1}s`;
+        // Filter functionality
+        function filterStaff(filter) {
+            const cards = document.querySelectorAll('.staff-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update active button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter cards
+            cards.forEach(card => {
+                const rank = card.dataset.rank;
+                const strikes = parseInt(card.dataset.strikes);
+                
+                let show = false;
+                
+                switch(filter) {
+                    case 'all':
+                        show = true;
+                        break;
+                    case 'high':
+                        show = rank === 'high';
+                        break;
+                    case 'middle':
+                        show = rank === 'middle';
+                        break;
+                    case 'low':
+                        show = rank === 'low';
+                        break;
+                    case 'no-strikes':
+                        show = strikes === 0;
+                        break;
+                }
+                
+                if (show) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeInUp 0.5s ease-out';
+                } else {
+                    card.style.display = 'none';
+                }
             });
+        }
 
-            // Add click effects to buttons
-            const buttons = document.querySelectorAll('.btn');
-            buttons.forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    if (!this.href || this.href.includes('#')) {
-                        e.preventDefault();
-                    }
-                    
-                    // Add ripple effect
-                    const ripple = document.createElement('span');
-                    ripple.style.position = 'absolute';
-                    ripple.style.borderRadius = '50%';
-                    ripple.style.background = 'rgba(255, 255, 255, 0.3)';
-                    ripple.style.transform = 'scale(0)';
-                    ripple.style.animation = 'ripple 0.6s linear';
-                    ripple.style.left = (e.clientX - this.offsetLeft - 10) + 'px';
-                    ripple.style.top = (e.clientY - this.offsetTop - 10) + 'px';
-                    ripple.style.width = '20px';
-                    ripple.style.height = '20px';
-                    
-                    this.appendChild(ripple);
+        // Update stats dynamically
+        function updateStats() {
+            const cards = document.querySelectorAll('.staff-card');
+            let highRank = 0, middleRank = 0, lowRank = 0;
+            
+            cards.forEach(card => {
+                const rank = card.dataset.rank;
+                switch(rank) {
+                    case 'high': highRank++; break;
+                    case 'middle': middleRank++; break;
+                    case 'low': lowRank++; break;
+                }
+            });
+            
+            document.getElementById('totalStaff').textContent = cards.length;
+            document.getElementById('highRankStaff').textContent = highRank;
+            document.getElementById('middleRankStaff').textContent = middleRank;
+            document.getElementById('lowRankStaff').textContent = lowRank;
+        }
+
+        // Initialize stats on load
+        document.addEventListener('DOMContentLoaded', updateStats);
+
+        // Add some interactive effects
+        document.querySelectorAll('.staff-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Copy Discord ID to clipboard functionality
+        document.querySelectorAll('.discord-id').forEach(element => {
+            element.style.cursor = 'pointer';
+            element.title = 'Click to copy Discord ID';
+            
+            element.addEventListener('click', function() {
+                const text = this.textContent;
+                navigator.clipboard.writeText(text).then(() => {
+                    // Show feedback
+                    const original = this.textContent;
+                    this.textContent = 'Copied!';
+                    this.style.background = 'rgba(76, 175, 80, 0.3)';
+                    this.style.borderColor = '#4CAF50';
                     
                     setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
+                        this.textContent = original;
+                        this.style.background = 'rgba(114, 137, 218, 0.2)';
+                        this.style.borderColor = '#7289da';
+                    }, 1000);
                 });
             });
-
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // Intersection Observer for animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.feature-card, .stat-item').forEach(el => {
-                observer.observe(el);
-            });
-
-            // Dynamic stats animation
-            const animateStats = () => {
-                const statNumbers = document.querySelectorAll('.stat-number');
-                statNumbers.forEach(stat => {
-                    const text = stat.textContent.replace(/,/g, '');
-                    const num = parseInt(text);
-
-                    if (!isNaN(num)) {
-                        let current = 0;
-                        const increment = num / 100;
-                        const timer = setInterval(() => {
-                            current += increment;
-                            if (current >= num) {
-                                current = num;
-                                clearInterval(timer);
-                            }
-                            stat.textContent = Math.floor(current).toLocaleString();
-                        }, 20);
-                    }
-                });
-            };
-
-            // Trigger stats animation when section is visible
-            const statsObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateStats();
-                        statsObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            const statsSection = document.querySelector('.stats-section');
-            if (statsSection) {
-                statsObserver.observe(statsSection);
-            }
         });
-        function savevideotime() {
-            localStorage.setItem('videoTime', document.querySelector('video').currentTime);
-            window.location.href = 'login';
-        }
-        // Add CSS for ripple animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-            
-            @keyframes countUp {
-                from { opacity: 0; transform: translateY(20px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-        `;
-        document.head.appendChild(style);
-    </script>
 
-</body></html>
+        // Add floating animation to particles
+        function createFloatingParticles() {
+            const container = document.querySelector('.floating-particles');
+            
+            for (let i = 0; i < 10; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.width = Math.random() * 6 + 2 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        // Initialize floating particles
+        createFloatingParticles();
+    </script>
